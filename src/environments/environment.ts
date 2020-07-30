@@ -17,6 +17,16 @@ export const environment = {
   serverUrl: '/api',
   defaultLanguage: 'en-US',
   supportedLanguages: ['en-US', 'es-ES'],
+  firebaseConfig: {
+    apiKey: 'AIzaSyCNLW8eXLSu6tpl2mt7VTsuyR91PzffnTM',
+    authDomain: 'numerosm-1f94a.firebaseapp.com',
+    databaseURL: 'https://numerosm-1f94a.firebaseio.com',
+    projectId: 'numerosm-1f94a',
+    storageBucket: 'numerosm-1f94a.appspot.com',
+    messagingSenderId: '857480746060',
+    appId: '1:857480746060:web:fffd6271d487ec297e50e9',
+    measurementId: 'G-ZTYHL922JK',
+  },
 };
 
 /*
