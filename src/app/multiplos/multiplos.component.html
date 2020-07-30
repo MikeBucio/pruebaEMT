@@ -1,0 +1,43 @@
+<div class="row container">
+  <div class="col-md-12">
+    <form class="form-inline" [formGroup]="formMultiplo">
+      <div class="form-group mb-2">
+        <label>Número</label>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <input type="text" class="form-control" placeholder="Sólo números" formControlName="userNumber" maxlength="2" />
+      </div>
+      <button
+        type="button"
+        class="btn btn-primary mb-2"
+        (click)="obtenerMultiplos()"
+        [disabled]="this.formMultiplo.invalid"
+      >
+        Guardar
+      </button>
+    </form>
+
+    <div class="row">
+      <div class="container">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>User number</th>
+              <th class="text-success">Multiplos 3</th>
+              <th class="text-danger">Multiplos 5</th>
+              <th class="text-primary">Multiplos 7</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let multiplo of multiplos">
+              <th [ngClass]="multiplo.userNumber != 0 ? 'text-success' : 'mb-0'">{{ multiplo.userNumber }}</th>
+              <td class="text-success">{{ multiplo.multiplo3 }}</td>
+              <td class="text-danger">{{ multiplo.multiplo5 }}</td>
+              <td class="text-primary">{{ multiplo.multiplo7 }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
